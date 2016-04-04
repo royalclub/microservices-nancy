@@ -1,0 +1,10 @@
+D:\minor\Project\NancyMicroservice-Math1\NancyMicroservice-Math3\bin\NancyMicroservice-Math3.dll.config
+D:\minor\Project\NancyMicroservice-Math1\NancyMicroservice-Math3\bin\NancyMicroservice-Math3.dll
+D:\minor\Project\NancyMicroservice-Math1\NancyMicroservice-Math3\bin\NancyMicroservice-Math3.pdb
+D:\minor\Project\NancyMicroservice-Math1\NancyMicroservice-Math3\bin\Nancy.dll
+D:\minor\Project\NancyMicroservice-Math1\NancyMicroservice-Math3\bin\Nancy.Hosting.Aspnet.dll
+D:\minor\Project\NancyMicroservice-Math1\NancyMicroservice-Math3\bin\Nancy.xml
+D:\minor\Project\NancyMicroservice-Math1\NancyMicroservice-Math3\bin\Nancy.Hosting.Aspnet.xml
+D:\minor\Project\NancyMicroservice-Math1\NancyMicroservice-Math3\obj\Debug\NancyMicroservice-Math3.dll
+D:\minor\Project\NancyMicroservice-Math1\NancyMicroservice-Math3\obj\Debug\NancyMicroservice-Math3.pdb
+D:\minor\project\NancyMicroservice-Math1\NancyMicroservice-Math3\obj\Debug\SquareRootCalculator.csprojResolveAssemblyReference.cache

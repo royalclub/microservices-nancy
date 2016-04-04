@@ -1,0 +1,10 @@
+D:\minor\Project\NancyMicroservice-Math1\NancyMicroservice-Math1\bin\NancyMicroservice-Math1.dll.config
+D:\minor\Project\NancyMicroservice-Math1\NancyMicroservice-Math1\bin\NancyMicroservice-Math1.dll
+D:\minor\Project\NancyMicroservice-Math1\NancyMicroservice-Math1\bin\NancyMicroservice-Math1.pdb
+D:\minor\Project\NancyMicroservice-Math1\NancyMicroservice-Math1\bin\Nancy.dll
+D:\minor\Project\NancyMicroservice-Math1\NancyMicroservice-Math1\bin\Nancy.Hosting.Aspnet.dll
+D:\minor\Project\NancyMicroservice-Math1\NancyMicroservice-Math1\bin\Nancy.xml
+D:\minor\Project\NancyMicroservice-Math1\NancyMicroservice-Math1\bin\Nancy.Hosting.Aspnet.xml
+D:\minor\Project\NancyMicroservice-Math1\NancyMicroservice-Math1\obj\Debug\NancyMicroservice-Math1.csprojResolveAssemblyReference.cache
+D:\minor\Project\NancyMicroservice-Math1\NancyMicroservice-Math1\obj\Debug\NancyMicroservice-Math1.dll
+D:\minor\Project\NancyMicroservice-Math1\NancyMicroservice-Math1\obj\Debug\NancyMicroservice-Math1.pdb
