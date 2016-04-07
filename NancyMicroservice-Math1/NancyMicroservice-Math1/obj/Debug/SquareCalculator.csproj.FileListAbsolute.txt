@@ -8,3 +8,13 @@ D:\minor\Project\NancyMicroservice-Math1\NancyMicroservice-Math1\bin\Nancy.Hosti
 D:\minor\Project\NancyMicroservice-Math1\NancyMicroservice-Math1\obj\Debug\SquareCalculator.csprojResolveAssemblyReference.cache
 D:\minor\Project\NancyMicroservice-Math1\NancyMicroservice-Math1\obj\Debug\NancyMicroservice-Math1.dll
 D:\minor\Project\NancyMicroservice-Math1\NancyMicroservice-Math1\obj\Debug\NancyMicroservice-Math1.pdb
+D:\minor\project\microservices-nancy\NancyMicroservice-Math1\NancyMicroservice-Math1\bin\NancyMicroservice-Math1.dll.config
+D:\minor\project\microservices-nancy\NancyMicroservice-Math1\NancyMicroservice-Math1\bin\NancyMicroservice-Math1.dll
+D:\minor\project\microservices-nancy\NancyMicroservice-Math1\NancyMicroservice-Math1\bin\NancyMicroservice-Math1.pdb
+D:\minor\project\microservices-nancy\NancyMicroservice-Math1\NancyMicroservice-Math1\bin\Nancy.dll
+D:\minor\project\microservices-nancy\NancyMicroservice-Math1\NancyMicroservice-Math1\bin\Nancy.Hosting.Aspnet.dll
+D:\minor\project\microservices-nancy\NancyMicroservice-Math1\NancyMicroservice-Math1\bin\Nancy.xml
+D:\minor\project\microservices-nancy\NancyMicroservice-Math1\NancyMicroservice-Math1\bin\Nancy.Hosting.Aspnet.xml
+D:\minor\project\microservices-nancy\NancyMicroservice-Math1\NancyMicroservice-Math1\obj\Debug\SquareCalculator.csprojResolveAssemblyReference.cache
+D:\minor\project\microservices-nancy\NancyMicroservice-Math1\NancyMicroservice-Math1\obj\Debug\NancyMicroservice-Math1.dll
+D:\minor\project\microservices-nancy\NancyMicroservice-Math1\NancyMicroservice-Math1\obj\Debug\NancyMicroservice-Math1.pdb

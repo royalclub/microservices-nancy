@@ -1,4 +1,5 @@
 using Nancy;
+using Nancy.ModelBinding;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,6 @@ using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -25,51 +25,55 @@ namespace NancyMicroservice_Math2
 
             //formule: a^2 + b^2 = c^2
             //with this function you can only get 'c'.
-            Get["/pythagoras"] = _ =>
+            Post["/pythagoras"] = _ =>
             {
-/*                int value = doCall(URL_SQUARE, new FormUrlEncodedContent(new[] {
-                    new KeyValuePair<string, string>("value", "5")
-                }));
+                var input = this.Bind<Input>();
+                
+                var valueA = new Dictionary<string, string>
+                {
+                    { "value", input.a.ToString() }
+                };
+                var valueB = new Dictionary<string, string>
+                {
+                    { "value", input.b.ToString() }
+                };
 
-                return value;*/
-                GetPOSTResponse();
-                return 1;
+                var squareA = GetSquareResult(valueA);
+                Task.WaitAll(squareA);
+                //var squareB = GetSquareResult(valueB).Result;
+
+                var c = squareA.Result.value; //+ squareB.value;
+
+                var valueC = new Dictionary<string, string>
+                {
+                    { "value", c.ToString() }
+                };
+
+                var squareRootC = GetSquareRootResult(valueC).Result;
+
+                return Response.AsJson(new OutputPythagoras { value = squareRootC.value });
 
             };
 
         }
 
-/*
-        private int doCall(String url, FormUrlEncodedContent content)
-        {
-            var client = new HttpClient();
-            client.BaseAddress = new Uri(url);
-            client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json")
-            );
-            var result = client.PostAsync("", content).Result;
-            string resultContent = result.Content.ReadAsStringAsync().Result;
-            var resultItem = JsonConvert.DeserializeObject<KeyValuePair<string, int>>(resultContent);
-            return resultItem.Value;
-        }
-*/
-
-        private async void GetPOSTResponse()
+        private async Task<OutputSquare> GetSquareResult(Dictionary<string, string> pairs)
         {
             using (var client = new HttpClient())
             {
-                var values = new Dictionary<string, string>
-                    {
-                       { "value", "5" }
-                    };
-
-                var content = new FormUrlEncodedContent(values);
-
+                var content = new FormUrlEncodedContent(pairs);
                 var response = await client.PostAsync(URL_SQUARE, content);
+                return await response.Content.ReadAsAsync<OutputSquare>();
+            }
+        }
 
-                var responseString = await response.Content.ReadAsStringAsync();
-                Output responseObject = await response.Content.ReadAsAsync<Output>();
-                int i = 1;
+        private async Task<OutputSquareRoot> GetSquareRootResult(Dictionary<string, string> pairs)
+        {
+            using (var client = new HttpClient())
+            {
+                var content = new FormUrlEncodedContent(pairs);
+                var response = await client.PostAsync(URL_SQUARE_ROOT, content);
+                return await response.Content.ReadAsAsync<OutputSquareRoot>();
             }
         }
 
@@ -79,11 +83,20 @@ namespace NancyMicroservice_Math2
             public int b { get; set; }
         }
 
-        public class Output
+        public class OutputPythagoras
+        {
+            public double value { get; set; }
+        }
+
+        public class OutputSquare
         {
             public int value { get; set; }
         }
 
+        public class OutputSquareRoot
+        {
+            public double value { get; set; }
+        }
 
     }
 }
