@@ -38,18 +38,16 @@ namespace NancyMicroservice_Math2
                     { "value", input.b.ToString() }
                 };
 
-                var squareA = GetSquareResult(valueA);
-                Task.WaitAll(squareA);
-                //var squareB = GetSquareResult(valueB).Result;
+                var squareA = AsyncHelpers.RunSync<OutputSquare>(() => GetSquareResult(valueA));
+                var squareB = AsyncHelpers.RunSync<OutputSquare>(() => GetSquareResult(valueB));
 
-                var c = squareA.Result.value; //+ squareB.value;
+                var c = squareA.value + squareB.value;
 
                 var valueC = new Dictionary<string, string>
                 {
                     { "value", c.ToString() }
                 };
-
-                var squareRootC = GetSquareRootResult(valueC).Result;
+                var squareRootC = AsyncHelpers.RunSync<OutputSquareRoot>(() => GetSquareRootResult(valueC));
 
                 return Response.AsJson(new OutputPythagoras { value = squareRootC.value });
 
@@ -61,6 +59,9 @@ namespace NancyMicroservice_Math2
         {
             using (var client = new HttpClient())
             {
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
                 var content = new FormUrlEncodedContent(pairs);
                 var response = await client.PostAsync(URL_SQUARE, content);
                 return await response.Content.ReadAsAsync<OutputSquare>();

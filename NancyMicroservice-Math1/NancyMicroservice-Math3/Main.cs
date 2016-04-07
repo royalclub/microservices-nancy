@@ -13,7 +13,7 @@ namespace NancyMicroservice_Math3
             Post["squareroots"] = parameter =>
             {
                 var data = this.Bind<Input>();
-                return new Output { value = Math.Sqrt(data.value) };
+                return Response.AsJson(new Output { value = Math.Sqrt(data.value) });
             };
         }
     }
