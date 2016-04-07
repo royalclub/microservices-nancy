@@ -13,7 +13,7 @@ namespace NancyMicroservice_Math1
             Post["square"] = parameter =>
             {
                 var data = this.Bind<Input>();
-                return new Output { value = (data.value * data.value) };
+                return Response.AsJson(new Output { value = (data.value * data.value) });
             };
 
         }
